@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catetin - Aplikasi Kelola Keuangan</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0F1B2D;
+            color: #E8F4F8;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, #0D1B4B, #0F1B2D);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #2A3F58;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -1px;
+        }
+        .dot { color: #00C9A7; }
+        .tagline {
+            font-size: 18px;
+            color: #A8C4E0;
+            margin-top: 10px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(0,201,167,0.15);
+            border: 1px solid rgba(0,201,167,0.3);
+            color: #00C9A7;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-top: 16px;
+        }
+        .btn-download {
+            display: inline-block;
+            background: linear-gradient(90deg, #00C9A7, #00A38D);
+            color: white;
+            padding: 14px 36px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 24px;
+        }
+        section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .feature-card {
+            background: #1E2D42;
+            border: 1px solid #2A3F58;
+            border-radius: 16px;
+            padding: 24px;
+        }
+        .feature-icon { font-size: 32px; margin-bottom: 12px; }
+        .feature-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .feature-desc { font-size: 14px; color: #7B9BB5; line-height: 1.6; }
+        .info-section {
+            background: #1E2D42;
+            border: 1px solid #2A3F58;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .info-section p { color: #A8C4E0; font-size: 15px; line-height: 1.8; }
+        .info-section a { color: #00C9A7; text-decoration: none; }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #2A3F58;
+            color: #7B9BB5;
+            font-size: 13px;
+            line-height: 2;
+        }
+        footer a { color: #00C9A7; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Catetin<span class="dot">.</span></h1>
+    <p class="tagline">Kelola Keuangan, Jadi Lebih Cerdas</p>
+    <span class="badge">Android App · v1.0.0</span>
+    <br>
+    <a href="#download" class="btn-download">⬇ Download APK</a>
+</header>
+
+<section>
+    <h2>Fitur Unggulan</h2>
+    <div class="features">
+        <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <div class="feature-title">Catat Transaksi</div>
+            <div class="feature-desc">Catat pemasukan dan pengeluaran dengan mudah, lengkap dengan kategori dan catatan.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <div class="feature-title">Laporan & Grafik</div>
+            <div class="feature-desc">Lihat laporan keuangan bulanan dengan grafik yang informatif dan mudah dipahami.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👛</div>
+            <div class="feature-title">Kelola Dompet</div>
+            <div class="feature-desc">Kelola berbagai dompet seperti tunai, bank, dan e-wallet dalam satu aplikasi.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <div class="feature-title">Anggaran Bulanan</div>
+            <div class="feature-desc">Tetapkan anggaran per kategori dan pantau penggunaan agar keuangan tetap terkontrol.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-title">Offline & Online</div>
+            <div class="feature-desc">Bisa digunakan tanpa internet. Data otomatis tersinkronisasi saat online.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🧾</div>
+            <div class="feature-title">Slip Transaksi</div>
+            <div class="feature-desc">Generate slip transaksi dengan nomor seri unik, bisa disimpan dan dibagikan.</div>
+        </div>
+    </div>
+</section>
+
+<section id="download">
+    <div class="info-section">
+        <div style="font-size:48px;margin-bottom:16px">📱</div>
+        <h2 style="margin-bottom:16px">Download Catetin</h2>
+        <p>
+            Catetin tersedia untuk Android 7.0 ke atas.<br>
+            Segera hadir di Google Play Store.<br><br>
+            Package: <strong style="color:#00C9A7">com.domylomy.catetin</strong>
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="info-section">
+        <h2 style="margin-bottom:16px">Tentang Pengembang</h2>
+        <p>
+            Dikembangkan oleh <strong style="color:#ffffff">Domy Lomy</strong><br>
+            dari <strong style="color:#ffffff">Caelum Gladio</strong><br><br>
+            <a href="https://www.caelumgladio.com">www.caelumgladio.com</a> &nbsp;·&nbsp;
+            <a href="https://akademi.caelumgladio.com">akademi.caelumgladio.com</a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Domy Lomy from Caelum Gladio</p>
+    <p><a href="https://www.caelumgladio.com">www.caelumgladio.com</a> · <a href="https://akademi.caelumgladio.com">akademi.caelumgladio.com</a></p>
+    <p style="margin-top:8px;color:#2A3F58">Catetin v1.0.0 · com.domylomy.catetin</p>
+</footer>
+
+</body>
+</html>
