@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo Landing Page - Pau Lomi</title>
     <!-- Favicon / Ikon Tab Browser -->
-    <link rel="icon" type="image/png" href="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/external-coding-web-development-flatart-icons-flat-flatarticons.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/fortawesome/Font-Awesome/6.x/svgs/solid/code.svg">
+    <!-- FontAwesome untuk Icon Keren -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -29,7 +29,6 @@
             position: relative;
         }
 
-        /* Canvas Animasi Koding di Background */
         #bg-canvas {
             position: fixed;
             top: 0;
@@ -41,7 +40,6 @@
             pointer-events: none;
         }
 
-        /* Container Utama dengan Efek Glassmorphism */
         .container {
             text-align: center;
             max-width: 550px;
@@ -58,7 +56,6 @@
             position: relative;
         }
 
-        /* Badge Status */
         .badge {
             background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(129, 140, 248, 0.1));
             color: #38bdf8;
@@ -85,7 +82,6 @@
             50% { opacity: 1; }
         }
 
-        /* Judul Utama */
         h1 {
             font-size: 3rem;
             font-weight: 800;
@@ -96,7 +92,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Status Informasi */
         .status-info {
             font-size: 1.1rem;
             color: #94a3b8;
@@ -104,7 +99,6 @@
             font-weight: 400;
         }
 
-        /* Button CTA Hubungi Saya (WhatsApp Style) */
         .btn-cta {
             display: inline-flex;
             align-items: center;
@@ -128,7 +122,6 @@
             filter: brightness(1.1);
         }
 
-        /* Section Tautan Eksternal */
         .links-section {
             border-top: 1px solid rgba(148, 163, 184, 0.12);
             padding-top: 2.5rem;
@@ -150,7 +143,6 @@
             gap: 1rem;
         }
 
-        /* Tombol Link Eksternal */
         .ext-link {
             display: flex;
             align-items: center;
@@ -173,7 +165,6 @@
             text-align: center;
         }
 
-        /* Pewarnaan Khusus Icon */
         .icon-company { color: #38bdf8; }
         .icon-academy { color: #a78bfa; }
 
@@ -195,7 +186,6 @@
             color: #38bdf8;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             color: #475569;
@@ -211,7 +201,6 @@
             color: #64748b;
         }
 
-        /* Responsif Layar Kecil */
         @media (max-width: 480px) {
             h1 { font-size: 2.2rem; }
             .container { padding: 2rem 1.25rem; }
@@ -229,7 +218,6 @@
         </div>
         
         <h1>Pau Lomi</h1>
-        
         <p class="status-info">Sistem masih dalam Pengembangan</p>
         
         <a href="https://s.id/chat-dlomy" class="btn-cta" target="_blank" rel="noopener noreferrer">
@@ -262,7 +250,6 @@
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
 
-        // Sesuaikan ukuran layar
         function resizeCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
@@ -270,31 +257,28 @@
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
 
-        // Karakter koding yang akan berjatuhan
         const codeChars = "01<>[]{}/\\=+*htmlcssjavascriptpaulomicaelumgladio2026_";
         const charArray = codeChars.split("");
 
         const fontSize = 14;
         const columns = canvas.width / fontSize;
 
-        // Tentukan posisi awal y jatuh tiap kolom
         const drops = [];
         for (let x = 0; x < columns; x++) {
-            drops[x] = Math.random() * -100; // Efek acak di awal
+            drops[x] = Math.random() * -100;
         }
 
         function drawBackground() {
-            ctx.fillStyle = 'rgba(10, 15, 29, 0.1)'; // Menghapus jejak secara perlahan
+            ctx.fillStyle = 'rgba(10, 15, 29, 0.1)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx.fillStyle = '#38bdf8'; // Warna teks koding digital
+            ctx.fillStyle = '#38bdf8';
             ctx.font = fontSize + 'px monospace';
 
             for (let i = 0; i < drops.length; i++) {
                 const text = charArray[Math.floor(Math.random() * charArray.length)];
                 ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-                // Jika sudah melewati dasar layar, reset ke atas secara acak
                 if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
                     drops[i] = 0;
                 }
@@ -302,7 +286,7 @@
             }
         }
 
-        setInterval(drawBackground, 33); // Jalankan animasi (~30 FPS)
+        setInterval(drawBackground, 33);
     </script>
 </body>
 </html>
